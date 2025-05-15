@@ -1,3 +1,4 @@
+// app/page.tsx
 import Link from "next/link";
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
         <ModuleCard
           title="Student Portal"
-          href="/student"
+          href="/portal/login"
           description="Access grades, schedules, and announcements."
         />
         <ModuleCard
