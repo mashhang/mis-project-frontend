@@ -9,8 +9,7 @@ import InfoCard from './components/InfoCard'
 import AttendanceChart from './components/AttendanceChart'
 import CourseInstructors from './components/CourseInstructors'
 import NoticeCard from './components/NoticeCard'
-import CourseCard from './components/CourseCard'
-import { Laptop, BarChart } from 'lucide-react'
+import { Laptop, BarChart, Code, Database, BookOpen, Clock } from 'lucide-react'
 import dayjs from 'dayjs'
 import Image from 'next/image'
 import api from './lib/axios'
@@ -23,9 +22,9 @@ import teacher3Img from './assets/teacher3.jpg'
 
 export default function PortalDashboard() {
   const router = useRouter()
-  const [student, setStudent] = useState(null)
+  const [student, setStudent] = useState<any>(null)
   const [loading, setLoading] = useState(true)
-  const [selectedCourse, setSelectedCourse] = useState(null)
+  const [selectedCourse, setSelectedCourse] = useState<any>(null)
 
   // Fetch student data
   useEffect(() => {
@@ -48,19 +47,49 @@ export default function PortalDashboard() {
     </div>
   )
 
-  // Enrolled courses list with overview
+  // Enrolled courses list with overview and schedule
   const enrolledCourses = [
     {
       id: 'oop',
       title: 'Object Oriented Programming',
       icon: Laptop,
-      overview: 'This course covers OOP fundamentals: classes, objects, inheritance, encapsulation, and polymorphism. You will build real-world projects.'
+      overview: 'This course covers OOP fundamentals: classes, objects, inheritance, encapsulation, and polymorphism. You will build real-world projects.',
+      schedule: 'Mon & Wed 10:00 - 11:30'
     },
     {
       id: 'db',
       title: 'Fundamentals of Database Systems',
       icon: BarChart,
-      overview: 'Learn relational database design, SQL querying, normalization, and transaction management with hands-on labs.'
+      overview: 'Learn relational database design, SQL querying, normalization, and transaction management with hands-on labs.',
+      schedule: 'Tue & Thu 14:00 - 15:30'
+    },
+    {
+      id: 'jsw',
+      title: 'JavaScript Web Development',
+      icon: Code,
+      overview: 'Master modern JavaScript, DOM manipulation, and building interactive web applications using frameworks.',
+      schedule: 'Mon & Wed 13:00 - 14:30'
+    },
+    {
+      id: 'ds',
+      title: 'Data Structures & Algorithms',
+      icon: Database,
+      overview: 'Study common data structures and algorithms with complexity analysis and coding practice.',
+      schedule: 'Tue & Thu 10:00 - 11:30'
+    },
+    {
+      id: 'wd',
+      title: 'Web Design Principles',
+      icon: BookOpen,
+      overview: 'Explore UX/UI principles, responsive layouts, and accessibility best practices.',
+      schedule: 'Fri 09:00 - 12:00'
+    },
+    {
+      id: 'ts',
+      title: 'Time Management & Productivity',
+      icon: Clock,
+      overview: 'Learn techniques to manage your time, set goals, and boost productivity for academic and personal projects.',
+      schedule: 'Fri 13:00 - 15:00'
     }
   ]
 
@@ -90,7 +119,6 @@ export default function PortalDashboard() {
               items={[
                 { label: 'Course', value: student.course || '-' },
                 { label: 'Year Level', value: student.year_level || '-' },
-                
               ]}
             />
             <AttendanceChart />
@@ -108,7 +136,7 @@ export default function PortalDashboard() {
           <div className="bg-white rounded-xl shadow p-4">
             <div className="flex items-center justify-between mb-2">
               <h3 className="text-gray-700 font-semibold text-sm">Enrolled Courses</h3>
-              <span className="text-purple-600 text-xs">Click "View" for overview</span>
+              <span className="text-purple-600 text-xs">Click "View" for overview & schedule</span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {enrolledCourses.map(course => (
@@ -133,11 +161,12 @@ export default function PortalDashboard() {
             <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
               <div className="bg-white rounded-xl shadow-lg max-w-md w-full p-6 relative">
                 <button onClick={() => setSelectedCourse(null)} className="absolute top-4 right-4 text-gray-500 hover:text-gray-700">&times;</button>
-                <h2 className="text-xl font-bold mb-4">{selectedCourse.title}</h2>
-                <p className="text-gray-700 mb-4">{selectedCourse.overview}</p>
+                <h2 className="text-xl font-bold mb-2">{selectedCourse.title}</h2>
+                <p className="text-gray-700 mb-2">{selectedCourse.overview}</p>
+                <p className="text-gray-600 italic">Schedule: {selectedCourse.schedule}</p>
                 <button
                   onClick={() => setSelectedCourse(null)}
-                  className="mt-2 px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700"
+                  className="mt-4 px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700"
                 >Close</button>
               </div>
             </div>
