@@ -63,7 +63,15 @@ const ManageApplication = () => {
   };
 
   const saveChanges = () => {
-    fetch('http://localhost/backend/update_application.php', {
+    // Ensure status_id is set before sending
+    if (!editFormData.status_id && editFormData.status) {
+      const status = statusOptions.find((s) => s.name === editFormData.status);
+      if (status) {
+        editFormData.status_id = status.id;
+      }
+    }
+
+    fetch('http://localhost:80/backend/Admission/update_application.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(editFormData),
@@ -252,7 +260,7 @@ const ManageApplication = () => {
                   {editingId === app.id ? (
                     <select
                       name="status"
-                      value={editFormData.status}
+                      value={editFormData.status || "Pending"}
                       onChange={handleStatusChange}
                       className="w-full"
                     >

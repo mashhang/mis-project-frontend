@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import { useNavigate } from "react-router-dom";
 import { useRouter } from "next/navigation";
 import { FileText, FileSearch, Lock } from "lucide-react";
@@ -10,6 +10,20 @@ const Dashboard: React.FC = () => {
   const router = useRouter();
   const user = JSON.parse(localStorage.getItem("user") || "{}");
   const [showLogoutConfirm, setShowLogoutConfirm] = useState<boolean>(false);
+  const [applicationStatus, setApplicationStatus] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (user?.id && user.id !== 0) {
+      fetch(`http://localhost/backend/Admission/get_application.php?user_id=${user.id}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setApplicationStatus(data.status_id || null);
+        })
+        .catch((error) => {
+          console.error("Error fetching application status:", error);
+        });
+    }
+  }, [user?.id]);
 
   const handleLogout = () => {
     localStorage.removeItem("user");
@@ -37,6 +51,18 @@ const Dashboard: React.FC = () => {
           This is your dashboard. You can check your application, update your
           details, or apply now.
         </p>
+
+        {applicationStatus === 1 && (
+          <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
+            <strong>Congratulations!</strong> You have been approved.
+          </div>
+        )}
+
+        {applicationStatus === 3 && (
+          <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
+            <strong>We're sorry.</strong> Your application has been rejected.
+          </div>
+        )}
 
         <div className="flex flex-col md:flex-row justify-center gap-4">
           <button
@@ -92,5 +118,6 @@ const Dashboard: React.FC = () => {
     </div>
   );
 };
+
 
 export default Dashboard;
