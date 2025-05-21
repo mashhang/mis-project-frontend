@@ -1,4 +1,3 @@
-// app/page.tsx
 import Link from "next/link";
 
 export default function Home() {
@@ -20,7 +19,7 @@ export default function Home() {
         />
         <ModuleCard
           title="Admission"
-          href="/admission"
+          href="/Admission/login"
           description="Manage applications, requirements, and status updates."
         />
         <ModuleCard

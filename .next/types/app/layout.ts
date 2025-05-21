@@ -1,4 +1,4 @@
-// File: C:\Users\magne\Documents\GITHUB PROJECTS\mis-project-frontend\app\layout.tsx
+// File: C:\Users\Public\mis-project-frontend\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

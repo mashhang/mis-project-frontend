@@ -1,7 +1,5 @@
 {
   "/page": "app/page.js",
-  "/portal/page": "app/portal/page.js",
-  "/portal/login/page": "app/portal/login/page.js",
-  "/portal/personal-info/[id]/page": "app/portal/personal-info/[id]/page.js",
-  "/portal/register/page": "app/portal/register/page.js"
+  "/Admission/login/page": "app/Admission/login/page.js",
+  "/Admission/admin-dashboard/page": "app/Admission/admin-dashboard/page.js"
 }
