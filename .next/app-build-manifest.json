@@ -26,80 +26,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/Admission/Dashboard/page.js"
     ],
-    "/Admission/ApplicationDetails/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/Admission/ApplicationDetails/page.js"
-    ],
     "/Admission/ApplicationForm/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/Admission/ApplicationForm/page.js"
     ],
-    "/portal/login/page": [
+    "/Admission/ApplicationDetails/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/portal/login/page.js"
-    ],
-    "/portal/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/portal/page.js"
-    ],
-    "/portal/personal-info/[id]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/portal/personal-info/[id]/page.js"
-    ],
-    "/registrar/login/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/registrar/login/page.js"
-    ],
-    "/(private)/dashboard/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(private)/dashboard/page.js"
-    ],
-    "/(private)/students/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(private)/students/page.js"
-    ],
-    "/(private)/studentinfo/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(private)/studentinfo/page.js"
-    ],
-    "/(private)/enrollment/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(private)/enrollment/page.js"
-    ],
-    "/(private)/coursecurriculum/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(private)/coursecurriculum/page.js"
-    ],
-    "/(private)/gradeslist/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(private)/gradeslist/page.js"
-    ],
-    "/(private)/grades/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(private)/grades/page.js"
-    ],
-    "/(private)/schedule/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(private)/schedule/page.js"
-    ],
-    "/Admission/signup/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/Admission/signup/page.js"
+      "static/chunks/app/Admission/ApplicationDetails/page.js"
     ]
   }
 }

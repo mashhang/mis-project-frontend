@@ -32,7 +32,7 @@ const ApplicationDetails: React.FC = () => {
         return;
       }
 
-      const fetchUrl = `http://localhost:3000/get_application.php?user_id=${userId}`;
+      const fetchUrl = `http://localhost/backend/Admission/get_application.php?user_id=${userId}`;
       console.log("Fetching application data from:", fetchUrl);
 
       try {
@@ -84,7 +84,7 @@ const ApplicationDetails: React.FC = () => {
     <div className="min-h-screen bg-white text-black px-8 py-12">
       <div className="border border-yellow-400 rounded p-8 max-w-6xl mx-auto relative">
         <button
-          onClick={() => router.push(`/Admission/dashboard`)}
+          onClick={() => router.push(`/Admission/Dashboard`)}
           className="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded font-semibold absolute top-4 right-4"
         >
           Back

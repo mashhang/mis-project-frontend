@@ -32,20 +32,22 @@ const AdminDashboard = () => {
   const [applicants, setApplicants] = useState<Applicant[]>([]);
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
 
-  fetch("http://localhost/backend/Admission/get_applicant_status_counts.php")
-    .then((res) => res.text())
-    .then((text) => {
-      console.log("Raw PHP response:", text);
-      const parsed = JSON.parse(text);
-      setData([
-        { name: "Approved", value: parsed.Approved || 0 },
-        { name: "Pending", value: parsed.Pending || 0 },
-        { name: "Rejected", value: parsed.Rejected || 0 },
-      ]);
-    })
-    .catch((error) => {
-      console.error("Error fetching applicant status counts:", error);
-    });
+  useEffect(() => {
+    fetch("http://localhost/backend/Admission/get_applicant_status_counts.php")
+      .then((res) => res.text())
+      .then((text) => {
+        console.log("Raw PHP response:", text);
+        const parsed = JSON.parse(text);
+        setData([
+          { name: "Approved", value: parsed.Approved || 0 },
+          { name: "Pending", value: parsed.Pending || 0 },
+          { name: "Rejected", value: parsed.Rejected || 0 },
+        ]);
+      })
+      .catch((error) => {
+        console.error("Error fetching applicant status counts:", error);
+      });
+  }, []);
 
   useEffect(() => {
     if (activeTab === "recordList") {

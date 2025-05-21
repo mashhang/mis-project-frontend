@@ -1,4 +1,4 @@
-// File: E:\COLLEGE EDREL\COLLEGE\mis-project-frontend\app\Admission\Dashboard\page.tsx
+// File: C:\Users\Rollin Jhay B. Abaja\mis-project-frontend\app\Admission\Dashboard\page.tsx
 import * as entry from '../../../../../app/Admission/Dashboard/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

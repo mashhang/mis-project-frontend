@@ -20,7 +20,7 @@ const ManageApplication = () => {
   }, []);
 
   const fetchApplications = () => {
-    fetch('http://localhost/backend/get_all_applicants.php')
+    fetch('http://localhost/backend/Admission/get_all_applicants.php')
       .then((res) => res.json())
       .then((data) => {
         setApplications(data);

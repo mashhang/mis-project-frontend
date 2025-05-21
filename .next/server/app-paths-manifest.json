@@ -1,7 +1,7 @@
 {
-  "/Admission/admin-dashboard/page": "app/Admission/admin-dashboard/page.js",
+  "/Admission/Dashboard/page": "app/Admission/Dashboard/page.js",
   "/Admission/login/page": "app/Admission/login/page.js",
   "/Admission/ApplicationForm/page": "app/Admission/ApplicationForm/page.js",
-  "/Admission/Dashboard/page": "app/Admission/Dashboard/page.js",
-  "/Admission/signup/page": "app/Admission/signup/page.js"
+  "/Admission/ApplicationDetails/page": "app/Admission/ApplicationDetails/page.js",
+  "/Admission/admin-dashboard/page": "app/Admission/admin-dashboard/page.js"
 }

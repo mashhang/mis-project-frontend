@@ -133,7 +133,7 @@ const ApplicationForm: React.FC = () => {
         guardianAddress: formData.guardianAddress,
       };
 
-      const response = await fetch("/save_application.php", {
+      const response = await fetch("http://localhost/backend/Admission/save_application.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(applicationData),
@@ -154,9 +154,10 @@ const ApplicationForm: React.FC = () => {
     }
   };
 
-  const handleViewDetails = () => {
-    router.push(`/Admission/ApplicationDetails?user_id=${user?.id}`);
-  };
+ const handleViewDetails = () => {
+  const user = JSON.parse(localStorage.getItem("user") || "null");
+  router.push(`/Admission/ApplicationDetails?user_id=${user?.id}`);
+};
 
   const handleSubmitAnother = () => {
     setFormData({
@@ -190,7 +191,7 @@ const ApplicationForm: React.FC = () => {
             </h1>
             <button
               type="button"
-              onClick={() => router.push(`/Admission/dashboard`)}
+              onClick={() => router.push(`/Admission/Dashboard`)}
               className="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded font-semibold"
             >
               Back
