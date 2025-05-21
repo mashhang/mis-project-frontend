@@ -1,7 +1,7 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js",
-  "/registrar/login/page": "app/registrar/login/page.js",
-  "/portal/login/page": "app/portal/login/page.js",
-  "/Admission/login/page": "app/Admission/login/page.js"
+  "/Admission/admin-dashboard/page": "app/Admission/admin-dashboard/page.js",
+  "/Admission/login/page": "app/Admission/login/page.js",
+  "/Admission/ApplicationForm/page": "app/Admission/ApplicationForm/page.js",
+  "/Admission/Dashboard/page": "app/Admission/Dashboard/page.js",
+  "/Admission/signup/page": "app/Admission/signup/page.js"
 }

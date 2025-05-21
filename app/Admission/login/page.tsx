@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
@@ -49,9 +50,9 @@ const Login = () => {
       if (response.ok && result.user) {
         localStorage.setItem("user", JSON.stringify(result.user));
         if (result.user && result.user.is_admin === 1) {
-          router.push("/Admission/admin-dashboard");
+          window.location.href = `http://localhost:3000/Admission/admin-dashboard?user_id=${result.user.id}`;
         } else {
-          router.push("/Admission/dashboard");
+          window.location.href = `http://localhost:3000/Admission/Dashboard?user_id=${result.user.id}`;
         }
 
         console.log("Full login response:", result);
