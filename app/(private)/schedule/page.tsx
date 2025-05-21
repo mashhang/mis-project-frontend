@@ -1,5 +1,5 @@
 "use client";
-import Sidebar from "@/components/Sidebar"; // adjust if path differs
+import Sidebar from "../../../components/Sidebar"; // adjust if path differs
 
 export default function SchedulePage() {
   const schedule = [

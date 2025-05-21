@@ -1,7 +1,7 @@
 "use client";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import Sidebar from "@/components/Sidebar";
+import Sidebar from "../../../components/Sidebar";
 
 type Subject = {
   student_id: string;

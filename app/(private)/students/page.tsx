@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import Sidebar from "@/components/Sidebar"; // adjust if needed
+import Sidebar from "../../../components/Sidebar"; // adjust if needed
 
 type Student = {
   id: string;

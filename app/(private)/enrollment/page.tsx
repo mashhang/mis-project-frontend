@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
-import Sidebar from "@/components/Sidebar"; // adjust path if needed
+import Sidebar from "../../../components/Sidebar"; // adjust path if needed
 import { useState } from "react";
 
 export default function EnrollmentPage() {

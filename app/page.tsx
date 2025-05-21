@@ -29,7 +29,7 @@ export default function Home() {
         />
         <ModuleCard
           title="Accounting"
-          href="/accounting"
+          href="http://localhost/backend/accounting/PHP/"
           description="Handle tuition payments, fees, and financial records."
         />
       </div>

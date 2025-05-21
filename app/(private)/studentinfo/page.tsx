@@ -3,7 +3,7 @@
 
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import Sidebar from "@/components/Sidebar";
+import Sidebar from "../../../components/Sidebar";
 
 export default function StudentInformation() {
   const params = useSearchParams();

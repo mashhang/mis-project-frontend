@@ -1,5 +1,5 @@
 "use client";
-import Sidebar from "@/components/Sidebar"; // Adjust path if needed
+import Sidebar from "../../../components/Sidebar"; // Adjust path if needed
 
 export default function CourseCurriculumPage() {
   const courses = [

@@ -11,15 +11,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/Admission/login/page": [
+    "/registrar/login/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/Admission/login/page.js"
-    ],
-    "/Admission/admin-dashboard/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/Admission/admin-dashboard/page.js"
+      "static/chunks/app/registrar/login/page.js"
     ]
   }
 }
